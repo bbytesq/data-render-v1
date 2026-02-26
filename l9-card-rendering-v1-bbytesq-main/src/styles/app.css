@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.studentsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.student-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  min-width: 300px;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+}
+
+.student-name {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-badge.inactive {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.info-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+}
+
+.value {
+  font-weight: 500;
+  color: white;
+}
+
+.group-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+}
+
+.gender-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.gender-icon.male {
+  color: #64b5f6;
+}
+
+.gender-icon.female {
+  color: #f8bbd9;
+}
+
+.grade-value {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #ffeb3b;
+}
+
+.email-row {
+  margin-top: 5px;
+}
+
+.email-link {
+  color: #80deea;
+  text-decoration: none;
+  font-size: 0.9em;
+  word-break: break-all;
+  text-align: right;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #4dd0e1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .student-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .student-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .value {
+    align-self: flex-end;
+  }
+}
